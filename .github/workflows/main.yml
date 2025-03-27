@@ -11,5 +11,13 @@
 
           - name: Package plugin
             run: |
-              zip -r plugin.zip .
+              zip -r out/plugin.zip .
             # Add other steps as needed, such as running tests or uploading the package
+          - name: Sync files
+            uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+            with:
+              server: ftp.jppaf.in
+              username: u948043933.plugins
+              password: ${{ secrets.ftp_password }}
+              local-dir: ./out
+              server-dir: ./plugin1
