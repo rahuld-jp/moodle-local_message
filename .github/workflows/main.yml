@@ -23,5 +23,5 @@
               server: ftp.jppaf.in
               username: u948043933.plugins
               password: ${{ secrets.ftp_password }}
-              local-dir: ./out
-              server-dir: ./plugin1
+              local-dir: ./out/
+              server-dir: ./plugin1/
