@@ -9,6 +9,10 @@
           - name: Checkout code
             uses: actions/checkout@v3
 
+          - name: Create dir
+            run: |
+               mkdir out
+               
           - name: Package plugin
             run: |
               zip -r out/plugin.zip .
